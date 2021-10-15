@@ -1,13 +1,5 @@
-pragma solidity 0.6.12;
+pragma solidity >=0.4.23 <0.9.0;
 
-/*
- * ApeSwapFinance 
- * App:      https://apeswap.finance
- * Medium:   https://medium.com/@ape_swap    
- * Twitter:  https://twitter.com/ape_swap 
- * Telegram: https://t.me/ape_swap
- * GitHub:   https://github.com/ApeSwapFinance
- */
 
 interface IMasterFarmer {
     function updateMultiplier(uint256 multiplierNumber) external; // onlyOwner
@@ -26,4 +18,5 @@ interface IMasterFarmer {
     function emergencyWithdraw(uint256 _pid) external;
     function getPoolInfo(uint256 _pid) external view;
     function dev(address _devaddr) external;
+    function userInfo(uint256 _pid, address _user) external view returns (uint256, uint256);
 }

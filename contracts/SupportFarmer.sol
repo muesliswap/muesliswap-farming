@@ -1,14 +1,5 @@
 pragma solidity 0.6.12;
 
-/*
- * ApeSwapFinance 
- * App:             https://apeswap.finance
- * Medium:          https://medium.com/@ape_swap    
- * Twitter:         https://twitter.com/ape_swap 
- * Telegram:        https://t.me/ape_swap
- * Announcements:   https://t.me/ape_swap_news
- * GitHub:          https://github.com/ApeSwapFinance
- */
 
 import '@pancakeswap/pancake-swap-lib/contracts/math/SafeMath.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/IBEP20.sol';
@@ -21,7 +12,7 @@ contract SupportFarmer {
 
     // Info of each user.
     struct UserInfo {
-        uint256 amount;   // How many MilkSPLIT tokens the user has provided.
+        uint256 amount;   // How many SPOON tokens the user has provided.
         uint256 rewardDebt;  // Reward debt. See explanation below.
         uint256 rewardPending;
         //
@@ -30,7 +21,7 @@ contract SupportFarmer {
         //
         //   pending reward = (user.amount * pool.accRewardPerShare) - user.rewardDebt + user.rewardPending
         //
-        // Whenever a user deposits or withdraws MilkSPLIT tokens to a pool. Here's what happens:
+        // Whenever a user deposits or withdraws SPOON tokens to a pool. Here's what happens:
         //   1. The pool's `accRewardPerShare` (and `lastRewardBlock`) gets updated.
         //   2. User receives the pending reward sent to his/her address.
         //   3. User's `amount` gets updated.
@@ -44,7 +35,7 @@ contract SupportFarmer {
         uint256 accRewardPerShare; // Accumulated reward per share, times 1e12. See below.
     }
 
-    // The MilkSPLIT TOKEN!
+    // The SPOON TOKEN!
     IBEP20 public syrup;
     // rewards created per block.
     uint256 public rewardPerBlock;

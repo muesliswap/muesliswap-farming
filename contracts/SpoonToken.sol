@@ -1,21 +1,11 @@
 pragma solidity 0.6.12;
 
-/*
- * ApeSwapFinance 
- * App:             https://apeswap.finance
- * Medium:          https://medium.com/@ape_swap    
- * Twitter:         https://twitter.com/ape_swap 
- * Telegram:        https://t.me/ape_swap
- * Announcements:   https://t.me/ape_swap_news
- * GitHub:          https://github.com/ApeSwapFinance
- */
-
 import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol";
 
 import "./MilkToken.sol";
 
-// MilkSplitBar with Governance.
-contract MilkSplitBar is BEP20('Bar Token', 'Bar') {
+// Spoon with Governance.
+contract SpoonToken is BEP20('Muesliswap Spoon Token', 'Spoon') {
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterApe).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
