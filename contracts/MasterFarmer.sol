@@ -16,7 +16,7 @@ import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol';
 
 import "./MilkToken.sol";
-import "./MilkSplitBar.sol";
+import "./SpoonToken.sol";
 
 // import "@nomiclabs/buidler/console.sol";
 
@@ -60,7 +60,7 @@ contract MasterFarmer is Ownable {
     // The Milk TOKEN!
     MilkToken public cake;
     // The Milk SPLIT TOKEN!
-    MilkSplitBar public syrup;
+    SpoonToken public syrup;
     // Dev address.
     address public devaddr;
     // Milk tokens created per block.
@@ -84,7 +84,7 @@ contract MasterFarmer is Ownable {
 
     constructor(
         MilkToken _Milk,
-        MilkSplitBar _MilkSplit,
+        SpoonToken _MilkSplit,
         address _devaddr,
         uint256 _MilkPerBlock,
         uint256 _startBlock,
